@@ -1,0 +1,81 @@
+@import '../../var.scss';
+
+
+
+.function-cont
+{
+    position: relative;
+    
+    padding: 50px;
+    width: 87%;
+    background: linear-gradient(62deg, rgba(237,0,85,1) 28%, rgba(146,58,251,1) 86%);
+    border-radius: 50px;
+}
+
+.function
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.function-left
+{
+    display: flex;
+    gap: 50px;
+}
+
+.filter-btn
+{
+    padding: 10.7px 10px;
+    border-radius: 8px;
+    background-color: #923AFB;
+    display: flex;
+    align-items: center;
+}
+
+.search-btn
+{
+    padding: 10.7px 10px;
+    border-radius: 8px;
+    background:$yellow-color;
+    display: flex;
+    align-items: center;
+}
+
+
+.active-search
+{
+    width: 500px;
+}
+
+.title
+{
+    font-size: 4rem;
+    position: absolute;
+    top:10%;
+    left: 46%;
+}
+
+.functionalities
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.function-line
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    h3
+    {
+        color: white;
+    }
+}
+
+

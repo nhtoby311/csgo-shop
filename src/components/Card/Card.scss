@@ -1,0 +1,60 @@
+.card
+{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 400px;
+    border-radius: 50px;
+    background: radial-gradient(circle, rgba(46,48,123,0.14) 24%, rgba(48,51,132,0.28) 86%);
+    backdrop-filter: blur(35px);
+    box-shadow: inset 2px 3px 13px 0px #E752B5;
+    padding: 50px 65px;
+    gap: 25px;
+    .card-title
+    {
+        font-size: 1.6rem;
+        color: white;
+    }
+    .card-img
+    {
+        width: 100%;
+        
+    }
+
+    .card-bot
+    {
+        width: 100%;
+    }
+    .card-bottom
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3
+        {
+            color: white;
+        }
+        p
+        {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        button
+        {
+            padding: 12px 27px;
+            background-color: #EF6868;
+            text-decoration: none;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 6px 2px rgba(239, 104, 104, 0.32);
+        }
+    }
+
+    .card-float
+    {
+        color: white;
+        margin-bottom: 10px;
+    }
+}

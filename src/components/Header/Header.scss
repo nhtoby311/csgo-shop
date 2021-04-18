@@ -1,0 +1,21 @@
+.header
+{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: space-between;
+    padding: 40px 60px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .nav
+    {
+        display: flex;
+        gap: 2rem;
+        p
+        {
+            color: white;
+        }
+    }
+}

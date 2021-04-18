@@ -1,0 +1,153 @@
+[{
+    "id": 1,
+    "name":  "Glock-18 | Neo-Noir",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_glock_cu_glock_noir_light_large.c93d0cbfa767d1f822a53ebfca0d57f532088c48.png",
+    "price" : "7.03€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},{
+    "id": 2,
+    "name":  "M4A1-S | Printstream",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_printstream_light_large.99e340c2eed00b54eef5320fd63e009fcede6cae.png",
+    "price" : "36.30€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},
+{
+    "id": 3,
+    "name":  "M4A4 | Cyber Security",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_cu_m4a4_cyberpunk_light_large.8ed70290de88498fcfdc0c89f23ba2ad60bd13a5.png",
+    "price" : "36.30€" ,
+    "rarity" : "Classified",
+    "exterior":"FN"
+},
+{
+    "id": 4,
+    "name":  "AWP | Dragon Lore",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_cu_medieval_dragon_awp_light_large.cb3b8168e59e96fd33efa9578206a2aaed036fc0.png",
+    "price" : "2671.28€" ,
+    "rarity" : "Convert",
+    "exterior":"FN"
+},
+{
+    "id": 5,
+    "name":  "AWP | Assimov",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_cu_awp_asimov_light_large.32d9045f8a2bcd13ca18390cc9fd82026e7195ab.png",
+    "price" : "51.08€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},
+{
+    "id": 6,
+    "name":  "AK-47 | The Empress",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_empress_light_large.f81d0b07dca381635c89f74bcdb6b64a6da6e81c.png",
+    "price" : "26.14€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},
+{
+    "id": 7,
+    "name":  "AK-47 | Bloodsport",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_bloodsport_light_large.40f076f6b92e08acc37860923533aa9768795b2b.png",
+    "price" : "49.07€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},
+{
+    "id": 8,
+    "name":  "M4A1-S | Hyper Beast",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1_hyper_beast_light_large.31850937661935a062d5f6faf5a1f02fdb90b861.png",
+    "price" : "9.65€" ,
+    "rarity" : "Convert",
+    "exterior":"WW"
+},
+{
+    "id": 9,
+    "name":  "M9 Bayonet | Doppler",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_m9_bayonet_am_doppler_phase1_light_large.1a9960a6bba1a82aeab00b0207b4ff7c423a1f06.png",
+    "price" : "474.18€" ,
+    "rarity" : "Convert",
+    "exterior":"MW"
+    
+},
+{
+    "id": 10,
+    "name":  "Flip Knife | Tiger Tooth",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_flip_an_tiger_orange_light_large.441c0d2cf427d90fb079e82af0d074c1bfad13e4.png",
+    "price" : "238.98€" ,
+    "rarity" : "Convert",
+    "exterior":"MW"
+},
+{
+    "id": 11,
+    "name":  "Butterfly Knife | Marble Fade",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_butterfly_am_marble_fade_light_large.c9170bcb854e5d3ed0f3a22bae8a4513fd46954a.png",
+    "price" : "1394.06€" ,
+    "rarity" : "Convert",
+    "exterior":"FN"
+},
+{
+    "id": 12,
+    "name":  "USP-S | Orion",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_usp_silencer_cu_usp_spitfire_light_large.883b877a8a57c9dd1128f2550ddd694d959f3150.png",
+    "price" : "18.23€" ,
+    "rarity" : "Classified",
+    "exterior":"MW"
+},
+{
+    "id": 13,
+    "name":  "P250 | See Ya Later",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_p250_cu_p250_cybercroc_light_large.396de1d53797f8875d242d1eb33d5b81dce2bb8e.png",
+    "price" : "4.54€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},
+{
+    "id": 14,
+    "name":  "AWP | Hyper Beast",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_cu_awp_hyper_beast_light_large.55efa5e3094af71ca6a56b6eac96cb022f7ecd8b.png",
+    "price" : "45.18€" ,
+    "rarity" : "Convert",
+    "exterior":"FT"
+},
+{
+    "id": 15,
+    "name":  "M4A4 | Buzz Kill",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_gs_m4a4_sector_light_large.43ec111ef558f74c49e31621d455f93ba414714e.png",
+    "price" : "15.26€" ,
+    "rarity" : "Convert",
+    "exterior":"WW"
+},
+{
+    "id": 16,
+    "name":  "Bayonet | Autotronic",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_bayonet_gs_bayonet_autotronic_light_large.4b7f809f4ee434dff8f270b041100012f39c5ebe.png",
+    "price" : "517.82€" ,
+    "rarity" : "Convert",
+    "exterior":"FN"
+},
+{
+    "id": 17,
+    "name":  "Skeleton Knife | Fade",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_skeleton_aa_fade_light_large.0651775fa2d0551359ec96559f9833e28fa07917.png",
+    "price" : "1552.16€",
+    "rarity" : "Convert",
+    "exterior":"FN"
+},
+{
+    "id": 18,
+    "name":  "Karambit | Tiger Tooth",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_karambit_an_tiger_orange_light_large.cd5a9d7da1f15b5360e825b7d8261210ce717643.png",
+    "price" : "672.14€",
+    "rarity" : "Convert",
+    "exterior":"FN"
+},
+{
+    "id": 19,
+    "name":  "Desert Eagle | Printstream",
+    "img": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_deagle_cu_deag_printstream_light_large.b468e56607da39fb2c88e493456290fd5db174c8.png",
+    "price" : "86.94€",
+    "rarity" : "Convert",
+    "exterior":"FT"
+}
+]

@@ -5,14 +5,17 @@ import Filter from './components/Filter/Filter';
 import Card from './components/Card/Card';
 import {Api} from './types/Api'
 import { ItemContext } from './contexts/ItemContext';
+import { FilteredItemContext } from './contexts/FilteredItemContext';
 
 function App() {
   const [items,setItems] = useState<Api[]>([])
+  const [filteredItems,setFilteredItems] = useState<Api[]>([])
 
   const getData = async function() {
     const response = await fetch("./api-csgo.json")
     const data = await response.json()
     setItems(data)
+    setFilteredItems(data)
   } 
 
   useEffect(() =>
@@ -35,8 +38,8 @@ function App() {
         <div className="cards-cont-cont">
           <div className="cards-cont">
             {
-              items && items.map( (item) => {
-                return <Card key={item.id} name={item.name} image={item.img} price={item.price}/>
+              filteredItems && filteredItems.map( (filteredItem) => {
+                return <Card key={filteredItem.id} name={filteredItem.name} image={filteredItem.img} price={filteredItem.price}/>
               }
             )} 
           </div>

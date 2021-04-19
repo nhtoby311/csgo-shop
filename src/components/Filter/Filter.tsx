@@ -1,59 +1,12 @@
 import './Filter.scss'
 import filter from '../../assets/filter.svg' 
-import { useContext, useEffect, useReducer, useState } from 'react'
 import gsap from 'gsap'
-import { ItemContext } from '../../contexts/ItemContext'
-import { Api } from '../../types/Api'
 import FilterButton from './FilterButton/FilterButton'
-
-type Action =
-{
-    type:string,
-    payload: Api[]
-}
-
-const uniqueAll = (array:string[]) =>{
-    return ['All',...(array.filter((x, i, array) => array.indexOf(x) === i)).sort()]
-}
-
-function reducer(state:typeof initialState,action:Action)
-{
-    switch(action.type){
-        case "INIT":
-            {
-                return { 
-                    ...state,
-                    priceRange:uniqueAll(action.payload.map((elem) => {return elem.price})),
-                    exterior:uniqueAll(action.payload.map((elem) => {return elem.exterior})),
-                    rarity:uniqueAll(action.payload.map((elem) => {return elem.rarity})),
-                }
-            }
-        default:
-            {
-                return state;
-            }
-    }
-
-}
-
-const initialState = 
-{
-    priceRange:['0$'],
-    exterior:['FN'],
-    rarity:['Convert'],
-    floatRange:['0.05']
-}
+import useFilter from '../../hooks/useFilter'
 
 export default function Filter()
 {
-    const [{priceRange, exterior,rarity,floatRange}, dispatch] =  useReducer(reducer, initialState);
-    const items = useContext(ItemContext)
-
-    useEffect(()=>
-    {
-        console.log("runnn")
-        dispatch({type:'INIT', payload:items})
-    },[items])
+    const {priceRange, exterior,rarity,floatRange,dispatch} = useFilter()
 
     return(
         <div className="function-cont">
@@ -81,7 +34,7 @@ export default function Filter()
                 <div className="function-line">
                     <h3>Price Range:</h3>
                     {priceRange.map((p,index) => {
-                        return <FilterButton key={index} val={p}/>
+                        return <FilterButton key={index} val={p} dispatch={() => dispatch({type:"SET_FILTER"})}/>
                     })}
                 </div>
                 <div className="function-line">

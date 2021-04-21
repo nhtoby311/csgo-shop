@@ -11,6 +11,7 @@ function App() {
   const [items,setItems] = useState<Api[]>([])
   const [filteredItems,setFilteredItems] = useState<Api[]>([])
 
+
   const getData = async function() {
     const response = await fetch("./api-csgo.json")
     const data = await response.json()
@@ -18,10 +19,19 @@ function App() {
     setFilteredItems(data)
   } 
 
+  const setThing = (a:any) =>
+  {
+    setFilteredItems(a)
+  }
+
   useEffect(() =>
   {
     getData()
   },[])
+
+  useEffect(()=>{
+    console.log("yeeettt")
+  },[filteredItems])
   return (
     <div>
       <div className="bg">
@@ -33,7 +43,7 @@ function App() {
       <Header />
       <section>
         <ItemContext.Provider value={items}>
-          <Filter />
+          <Filter data={items} setFilteredItems={setThing}/>
         </ItemContext.Provider>
         <div className="cards-cont-cont">
           <div className="cards-cont">

@@ -103,11 +103,6 @@ function reducer(state:typeof initialState,action:Action)
                     rarity:uniqueAll(action.payload!.map((elem) => {return elem.rarity}),'rarity'),
                 }
             }
-        case "SET_FILTER":
-            {
-                console.log("SET_FILTER")
-                return state
-            }
         default:
             {
                 return state;
@@ -124,7 +119,7 @@ const initialState =
     floatRange:['0.05']
 }
 
-export default function useFilter()
+export default function useFilterOption()
 {
     const [{priceRange, exterior,rarity,floatRange}, dispatch] =  useReducer(reducer, initialState);
     const items = useContext(ItemContext)
@@ -134,5 +129,5 @@ export default function useFilter()
         dispatch({type:'INIT', payload:items})
     },[items])
 
-    return {priceRange, exterior,rarity,floatRange ,dispatch}
+    return {priceRange, exterior,rarity,floatRange}
 }

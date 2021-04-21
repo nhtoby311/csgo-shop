@@ -3,7 +3,7 @@ import filter from '../../assets/filter.svg'
 import gsap from 'gsap'
 import FilterButton from './FilterButton/FilterButton'
 import useFilterOption from '../../hooks/useFilterOption'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 
 
@@ -15,6 +15,7 @@ export default function Filter(props:any)
         exterior: [],
         rarity:[]
     });
+    const firstTime = useRef(true)
 
     const filtering = () => {
         let ori = props.data;
@@ -39,38 +40,12 @@ export default function Filter(props:any)
         props.setFilteredItems(result);
    
 
-
-        /*let result = ori.filter((data:any) => {
-          for (let i = 0; i < listFilter.exterior.length; i++) {
-            if (data.exterior === listFilter.exterior[i]) {
-              return true;
-            }
-          }
-          return false;
-        });
-        result = ori.filter((data:any) => {
-            for (let i = 0; i < listFilter.rarity.length; i++) {
-              if (data.rarity === listFilter.rarity[i]) {
-                return true;
-              }
-            }
-            return false;
-        });
-
-        
-        if (result.length == 0) {
-          props.setFilteredItems(ori);
-        } else {
-          console.log("aff:");
-          console.log(result);
-          props.setFilteredItems(result);
-        }*/
     };
 
 
     const handleList = (push:any, type:any, status:any) => 
     {
-        const handle = (pro: 'exterior' | 'price' | 'rarity') =>
+        const handleType = (pro: 'exterior' | 'price' | 'rarity') =>
         {
             const a:string[] = [...listFilter[pro]]; //Create an temp array to store list of filter for each properties
             if (status == true) {
@@ -96,15 +71,15 @@ export default function Filter(props:any)
         {
             case "EXTERIOR":
                 {
-                    return handle('exterior')
+                    return handleType('exterior')
                 }
             case "RARITY":
                 {
-                    return handle('rarity')
+                    return handleType('rarity')
                 }
             case "PRICE":
                 {
-                    return handle('price')
+                    return handleType('price')
                 }
             default:
                 return listFilter
@@ -112,8 +87,14 @@ export default function Filter(props:any)
     }
 
     useEffect(()=>{
-        console.log(listFilter)
-        filtering()
+        if(firstTime.current == false){
+            console.log(listFilter)
+            filtering()
+        }
+        else
+        {
+            firstTime.current = false
+        }
     },[listFilter])
 
     return(

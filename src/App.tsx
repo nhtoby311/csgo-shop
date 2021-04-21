@@ -5,7 +5,6 @@ import Filter from './components/Filter/Filter';
 import Card from './components/Card/Card';
 import {Api} from './types/Api'
 import { ItemContext } from './contexts/ItemContext';
-import { FilteredItemContext } from './contexts/FilteredItemContext';
 
 function App() {
   const [items,setItems] = useState<Api[]>([])
@@ -49,7 +48,7 @@ function App() {
           <div className="cards-cont">
             {
               filteredItems && filteredItems.map( (filteredItem) => {
-                return <Card key={filteredItem.id} name={filteredItem.name} image={filteredItem.img} price={filteredItem.price}/>
+                return <Card key={filteredItem.id} name={filteredItem.name} image={filteredItem.img} price={filteredItem.price} exterior={filteredItem.exterior}/>
               }
             )} 
           </div>

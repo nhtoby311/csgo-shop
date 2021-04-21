@@ -7,10 +7,13 @@
     justify-content: center;
     position: relative;
     padding: 5px 12px;
-    border: solid white 2px;
+    height: 33px;
+    border: 2px solid rgba(255, 255, 255, 0.692);
     border-radius: 7px;
+    cursor: pointer;
     h4
     {
+        user-select: none;
         color: white;
         font-weight: 400;
         font-size: 1rem;
@@ -18,5 +21,7 @@
 }
 .active-filter
 {
+    border: none;
     background: $yellow-color;
+    box-shadow: 7px 7px 16px -1px rgba(0,0,0,0.3);
 }

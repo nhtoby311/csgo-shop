@@ -27,19 +27,21 @@ const uniqueAll = (array:string[],type:string) =>
             return arr;
         }
         let sortedPrice = bSort(array.map((elem)=> parseInt(elem.slice(0, -1))))
-        //console.log(sortedPrice)
+        console.log(sortedPrice)
         const groupThree = (array:number[]) :string[] =>
         {
             let final = [];
+            let temp = 0;
             for (let i = 0;i < array.length; i+=3)
             {
                 if (array.length-i > (3-1))
                 {
-                    final.push(array[i] + " - " + array[i+2])
+                    final.push(temp + " - " + array[i+2])
+                    temp = array[i+2]
                 }
                 else
                 {
-                    final.push(array[i] + " - " + array[array.length-1])
+                    final.push(temp + " - " + array[array.length-1])
                 }
             }
             return final
@@ -72,13 +74,12 @@ const uniqueAll = (array:string[],type:string) =>
     {
         case 'price':
             {
-                array.push("0€")
-                return ['All',...sortPrice((array.filter((x, i, array) => array.indexOf(x) === i)))]
+                return [...sortPrice((array.filter((x, i, array) => array.indexOf(x) === i)))]
             }
         case 'rarity':
-            return ['All',...sortRarity((array.filter((x, i, array) => array.indexOf(x) === i)))]
+            return [...sortRarity((array.filter((x, i, array) => array.indexOf(x) === i)))]
         case 'exterior':
-            return ['All',...sortExterior((array.filter((x, i, array) => array.indexOf(x) === i)))]
+            return [...sortExterior((array.filter((x, i, array) => array.indexOf(x) === i)))]
         default:
             return array
     }

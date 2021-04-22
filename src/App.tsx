@@ -18,7 +18,7 @@ function App() {
     setFilteredItems(data)
   } 
 
-  const setThing = (a:any) =>
+  const setFiltering = (a:any) =>
   {
     setFilteredItems(a)
   }
@@ -28,9 +28,6 @@ function App() {
     getData()
   },[])
 
-  useEffect(()=>{
-    console.log("yeeettt")
-  },[filteredItems])
   return (
     <div>
       <div className="bg">
@@ -42,7 +39,7 @@ function App() {
       <Header />
       <section>
         <ItemContext.Provider value={items}>
-          <Filter data={items} setFilteredItems={setThing}/>
+          <Filter data={items} setFilteredItems={setFiltering}/>
         </ItemContext.Provider>
         <div className="cards-cont-cont">
           <div className="cards-cont">

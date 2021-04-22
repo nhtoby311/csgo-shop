@@ -18,9 +18,42 @@ export default function Filter(props:any)
     const firstTime = useRef(true)
 
     const filtering = () => {
+        const extractPrice = (array:string[])=>
+        {
+            let result = []
+            for ( let i = 0; i < array.length; i++)
+            {
+                let arr = array[i].split(" ").filter((ele)=>{return ele != '-'})
+                arr[1] = arr[1].slice(0, -1)
+                result.push(arr)
+            }
+            return result 
+        }
+
+
         let ori = props.data;
         const proper = ['exterior','rarity']
         let result = ori;
+        
+        if(listFilter.price.length != 0)                    //Filter price
+        {
+            const extracted = extractPrice(listFilter.price)
+            result = result.filter((data:any)=>{
+                for (let i = 0; i < extracted.length;i++)
+                {
+                    const from:number = parseInt(extracted[i][0])
+                    const to:number = parseInt(extracted[i][1])
+                    const price = parseInt(data.price.slice(0, -1))
+                    if ( price >= from && price <= to)
+                    {
+                        return true
+                    }
+                    
+                }
+                return false
+            })
+        }
+
         for (let i = 0; i< proper.length;i++)
         {
             if (listFilter[proper[i]].length != 0)
@@ -28,7 +61,6 @@ export default function Filter(props:any)
                 result = result.filter((data:any) => {
                     for (let j = 0; j < listFilter[proper[i]].length; j++) {
                         if (data[proper[i]] === listFilter[proper[i]][j]) {
-                            
                         return true;
                         }
                     }
@@ -67,6 +99,7 @@ export default function Filter(props:any)
             }
         }
 
+
         switch (type)
         {
             case "EXTERIOR":
@@ -88,7 +121,7 @@ export default function Filter(props:any)
 
     useEffect(()=>{
         if(firstTime.current == false){
-            console.log(listFilter)
+            //console.log(listFilter)
             filtering()
         }
         else

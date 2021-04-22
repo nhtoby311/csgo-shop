@@ -8,6 +8,11 @@
     font-family: $primary-font;
 }
 
+body
+{
+    overflow-x: hidden;
+}
+
 h1
 {
     font-size: 1.2rem;

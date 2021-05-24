@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function Filter(props:any)
 {
+    const [fileterOptionState, setFilterOptionState] = useState(false);
     const {priceRange, exterior,rarity,floatRange} = useFilterOption()
     const [listFilter, setListFilter] = useState<any>({
         price: [],
@@ -120,6 +121,36 @@ export default function Filter(props:any)
     }
 
     useEffect(()=>{
+        if(!fileterOptionState)
+        {
+            gsap.to('.functionalities',{
+                opacity:0,
+                duration:0.5
+            })
+            gsap.to('.cards-cont',{
+                top:'-200px',
+                duration:0.5
+            })
+        }
+        else
+        {
+            gsap.to('.functionalities',{
+                opacity:1,
+                duration:0.5
+            })
+            gsap.to('.cards-cont',{
+                top:'-15px',
+                duration:0.5
+            })
+        }
+    },[fileterOptionState])
+
+    const handleFilterState = ()=>
+    {
+        setFilterOptionState(!fileterOptionState)
+    }
+
+    useEffect(()=>{
         if(firstTime.current == false){
             //console.log(listFilter)
             filtering()
@@ -130,11 +161,13 @@ export default function Filter(props:any)
         }
     },[listFilter])
 
+    
+
     return(
         <div className="function-cont">
             <div className="function">
                 <div className="function-left">
-                    <div className="filter-btn" >
+                    <div className="filter-btn" onClick={handleFilterState}>
                         <img src={filter}/>
                     </div>
                     <div className="search-btn" onClick={(e)=>{

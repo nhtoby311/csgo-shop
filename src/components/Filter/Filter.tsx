@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import FilterButton from './FilterButton/FilterButton'
 import useFilterOption from '../../hooks/useFilterOption'
 import { useEffect, useRef, useState } from 'react'
+import MultiRangeSlider from './MultiRangeSlider/MultiRangeSlider'
 
 
 
@@ -11,6 +12,7 @@ export default function Filter(props:any)
 {
     const [fileterOptionState, setFilterOptionState] = useState(false);
     const {priceRange, exterior,rarity,floatRange} = useFilterOption()
+    //const [rangeval, setRangeval] = useState('');
     const [listFilter, setListFilter] = useState<any>({
         price: [],
         exterior: [],
@@ -199,6 +201,10 @@ export default function Filter(props:any)
                     })}
                     <div className="function-line">
                     <h3>Float Range:</h3>
+
+        
+                    <MultiRangeSlider min={0} max={1000}/>
+
                     {floatRange.map((p,index) => {
                         return <FilterButton key={index} val={p} dispatch={handleList} type={"PRICE"}/>
                     })}

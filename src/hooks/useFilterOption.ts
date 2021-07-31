@@ -8,6 +8,14 @@ type Action =
     payload?: Api[]
 }
 
+type initialState = 
+{
+    priceRange:string[],
+    exterior:string[],
+    rarity:string[],
+    floatRange:number[]
+}
+
 const uniqueAll = (array:string[],type:string) =>
 {
     const sortPrice = (array:string[]) => 
@@ -112,12 +120,12 @@ function reducer(state:typeof initialState,action:Action)
 
 }
 
-const initialState = 
+const initialState:initialState = 
 {
     priceRange:['0$'],
     exterior:['FN'],
     rarity:['Convert'],
-    floatRange:['0.05']
+    floatRange:[]
 }
 
 export default function useFilterOption()

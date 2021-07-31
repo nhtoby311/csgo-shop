@@ -77,4 +77,30 @@
     }
 }
 
+/*.slider
+{
+    appearance: none;
+    width: 100px;               //set width and height so thumb can be outside
+    height: 5px;
+    border-radius: 55px;
+    background: rgba(228, 228, 228, 0.4);
+    outline: none;
+    padding: 0;
+    margin: 0;
+    &::-webkit-slider-thumb //small thumb
+    {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: $yellow-color;
+        border-radius: 50%;
+    }
+    &:hover.slider:before
+    {
+        position: absolute;
+        color:white;
+        content: '50';
+        width: 30px;
+    }
+}*/
 

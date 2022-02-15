@@ -6,7 +6,7 @@ export default function FilterButton(props:any)
 
     const activatedClass = ()=>
     {
-        if (active == true) return "active-filter";
+        if (active === true) return "active-filter";
         return "";
     }
 
@@ -17,7 +17,8 @@ export default function FilterButton(props:any)
 
     useEffect(()=>{
         props.dispatch(props.val,props.type,active)
-    },[active])
+        
+    },[active])// eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div className={`btn-cont ${activatedClass()}`} onClick={()=>{

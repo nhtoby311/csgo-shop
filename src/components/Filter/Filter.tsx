@@ -26,7 +26,7 @@ export default function Filter(props:any)
             let result = []
             for ( let i = 0; i < array.length; i++)
             {
-                let arr = array[i].split(" ").filter((ele)=>{return ele != '-'})
+                let arr = array[i].split(" ").filter((ele)=>{return ele !== '-'})
                 arr[1] = arr[1].slice(0, -1)
                 result.push(arr)
             }
@@ -38,7 +38,7 @@ export default function Filter(props:any)
         const proper = ['exterior','rarity']
         let result = ori;
         
-        if(listFilter.price.length != 0)                    //Filter price
+        if(listFilter.price.length !== 0)                    //Filter price
         {
             const extracted = extractPrice(listFilter.price)
             result = result.filter((data:any)=>{
@@ -59,7 +59,7 @@ export default function Filter(props:any)
 
         for (let i = 0; i< proper.length;i++)
         {
-            if (listFilter[proper[i]].length != 0)
+            if (listFilter[proper[i]].length !== 0)
             {
                 result = result.filter((data:any) => {
                     for (let j = 0; j < listFilter[proper[i]].length; j++) {
@@ -83,7 +83,7 @@ export default function Filter(props:any)
         const handleType = (pro: 'exterior' | 'price' | 'rarity') =>
         {
             const a:string[] = [...listFilter[pro]]; //Create an temp array to store list of filter for each properties
-            if (status == true) {
+            if (status === true) {
                 a.push(push); //Add filter to array
                 setListFilter({
                 ...listFilter,
@@ -153,7 +153,7 @@ export default function Filter(props:any)
     }
 
     useEffect(()=>{
-        if(firstTime.current == false){
+        if(firstTime.current === false){
             //console.log(listFilter)
             filtering()
         }
@@ -161,7 +161,7 @@ export default function Filter(props:any)
         {
             firstTime.current = false
         }
-    },[listFilter])
+    },[listFilter])// eslint-disable-line react-hooks/exhaustive-deps
 
     
 
@@ -170,7 +170,7 @@ export default function Filter(props:any)
             <div className="function">
                 <div className="function-left">
                     <div className="filter-btn" onClick={handleFilterState}>
-                        <img src={filter}/>
+                        <img alt=""src={filter}/>
                     </div>
                     <div className="search-btn" onClick={(e)=>{
                         gsap.to(e.currentTarget,{
@@ -179,7 +179,7 @@ export default function Filter(props:any)
                         })
                         
                     }}>
-                    <img src={filter}/>
+                    <img alt="" src={filter}/>
                     </div>
                 </div>
 

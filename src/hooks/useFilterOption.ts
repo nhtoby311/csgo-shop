@@ -100,7 +100,7 @@ const rounding = (elem: string):string =>
 }
 
 
-function reducer(state:typeof initialState,action:Action)
+function reducer(state:typeof initState,action:Action)
 {
     switch(action.type){
         case "INIT":
@@ -120,7 +120,7 @@ function reducer(state:typeof initialState,action:Action)
 
 }
 
-const initialState:initialState = 
+const initState:initialState = 
 {
     priceRange:['0$'],
     exterior:['FN'],
@@ -130,7 +130,7 @@ const initialState:initialState =
 
 export default function useFilterOption()
 {
-    const [{priceRange, exterior,rarity,floatRange}, dispatch] =  useReducer(reducer, initialState);
+    const [{priceRange, exterior,rarity,floatRange}, dispatch] =  useReducer(reducer, initState);
     const items = useContext(ItemContext)
 
     useEffect(()=>

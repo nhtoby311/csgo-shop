@@ -130,7 +130,7 @@ export default function Filter(props:any)
                 duration:0.5
             })
             gsap.to('.cards-cont',{
-                top:'-200px',
+                translateY:'-200px',
                 duration:0.5
             })
         }
@@ -141,7 +141,7 @@ export default function Filter(props:any)
                 duration:0.5
             })
             gsap.to('.cards-cont',{
-                top:'-15px',
+                translateY:'0',
                 duration:0.5
             })
         }
